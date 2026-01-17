@@ -529,14 +529,9 @@ export default function HomePage() {
         </p>
       </section>
 
-      <footer style={{
-        background: "linear-gradient(135deg, #0a0a14 0%, #1a1a2e 100%)",
-        color: "rgba(255,255,255,0.7)",
-        padding: "clamp(1.5rem, 5vw, 3rem) clamp(20px, 5vw, 40px)",
-        textAlign: "center",
-      }}>
-        <p style={{ fontSize: "clamp(0.95rem, 2.5vw, 1.1rem)" }}>
-          © 2026 Cyber Crime Portal | Ministry of Home Affairs, Govt. of India 🇮🇳
+      <footer style={{ background: "#0b1220", color: "rgba(255,255,255,0.7)", padding: "2rem 2rem", textAlign: "center" }}>
+        <p style={{ fontSize: "1rem" }}>
+          © 2026 Cyber Crime Portal | Ministry of Home Affairs, Govt. of India
         </p>
       </footer>
     </div>
