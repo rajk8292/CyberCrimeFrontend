@@ -21,7 +21,7 @@ export default function App() {
 
   // Fetch all cases
   useEffect(() => {
-    fetch("http://localhost:8080/api/cases")
+    fetch("https://cybercrimebackend.onrender.com/api/cases")
       .then((res) => res.json())
       .then((data) => setCases(data))
       .catch((err) => console.error(err));
@@ -55,16 +55,17 @@ export default function App() {
             <AddCase setCases={setCases} />
           )}
 
-         {dashboardPage === "all-cases" && (
-  <CaseList
-    cases={cases}
-    setCases={setCases}   // 🔥 pass this
-    onEdit={(id) => {
-      setSelectedCase(id);
-      setDashboardPage("case-details");
-    }}
-  />
-)}
+          {dashboardPage === "all-cases" && (
+            <CaseList
+              cases={cases}
+              setCases={setCases}
+              onEdit={(id) => {
+                setSelectedCase(id);
+                setDashboardPage("case-details");
+              }}
+            />
+          )}
+
           {dashboardPage === "complaints" && <ComplaintList />}
         </AdminDashboard>
       )}
