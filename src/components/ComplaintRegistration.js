@@ -66,10 +66,13 @@ export default function ComplaintRegistration({ onComplaintAdded }) {
       formDataToSend.append("description", formData.description);
       if (document) formDataToSend.append("document", document);
 
-      const res = await fetch("http://localhost:8080/api/complaints/with-file", {
-        method: "POST",
-        body: formDataToSend,
-      });
+      const res = await fetch(
+  `${process.env.REACT_APP_API_URL}/api/complaints/with-file`,
+  {
+    method: "POST",
+    body: formDataToSend,
+  }
+);
 
       if (!res.ok) {
         const errText = await res.text();
