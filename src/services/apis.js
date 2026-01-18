@@ -1,5 +1,5 @@
 import axios from "axios";
-const BASE = "http://localhost:8080/api";
+const BASE = "https://cybercrimebackend.onrender.com/api";
 
 export const getCases = () => axios.get(`${BASE}/cases`);
 export const addCase = (data) => axios.post(`${BASE}/cases`, data);
